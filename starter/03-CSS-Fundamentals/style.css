@@ -1,11 +1,10 @@
-h1,
-h2,
-h3,
-h4,
-p,
-li {
-  font-family: sans-serif;
+/* * {
+  margin: 0px;
+} */
+
+body {
   color: #444;
+  font-family: sans-serif;
 }
 
 h1,
@@ -30,14 +29,12 @@ h3 {
 
 h4 {
   font-size: 20px;
-
   text-transform: uppercase;
   text-align: center;
 }
 
 p {
   font-size: 22px;
-
   line-height: 1.5;
 }
 
@@ -111,11 +108,11 @@ article p:last-child {
   color: red;
 }
 
-/* However this will work for the first child */
+/* However this would work for the first child */
 
-article p:first-of-type {
+/* article p:first-of-type {
   color: red;
-}
+} */
 
 /* Styling links */
 
@@ -159,3 +156,12 @@ a:active {
 footer p {
   color: green !important;
 } */
+
+/* nav a:link,
+nav p {
+  font-size: 18px;
+} */
+
+nav {
+  font-size: 18px;
+}
