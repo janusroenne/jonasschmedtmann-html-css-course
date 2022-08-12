@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
 
 .price {
   font-size: 24px;
+  float: left;
 }
 
 .shipping {
@@ -35,10 +37,13 @@ body {
   font-weight: bold;
   margin-bottom: 20px;
   text-transform: uppercase;
+  float: right;
+  margin-top: 8px;
 }
 
 .description {
   margin-bottom: 10px;
+  /* clear: both; */
 }
 
 .more-info:link,
@@ -56,7 +61,6 @@ body {
 .details-title {
   font-size: 16px;
   margin-bottom: 15px;
-  margin-top: 30px;
   text-transform: uppercase;
 }
 
@@ -125,4 +129,24 @@ body {
 }
 .brown {
   background-color: brown;
+}
+
+/* Challenge #4 */
+
+.product-img {
+  float: left;
+}
+
+.product-info {
+  float: left;
+  width: 243px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+.product-details {
+  float: left;
+  width: 243px;
+  margin-top: 20px;
 }
