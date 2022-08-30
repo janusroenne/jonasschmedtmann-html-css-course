@@ -4,100 +4,99 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: 'Rubik', sans-serif;
-  color: #444;
-}
+body {
+  font-family: sans-serif;
+  color: #343a40;
+  font-size: 24px;
 
-.container {
-  margin: 0 auto;
-  width: 1200px;
-}
+  display: grid;
+  grid-template-columns: 80px 400px 1fr 250px;
+  grid-template-rows: 80px 1fr;
 
-.vertical {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-header {
   height: 100vh;
-  position: relative;
+  text-align: center;
+  font-weight: bold;
+}
 
-  /* Using linear-gradient to darken the background image */
-
-  background-image: linear-gradient(
-      rgba(34, 34, 34, 0.6),
-      rgba(34, 34, 34, 0.6)
-    ),
-    url(hero.jpg);
-
-  background-size: cover;
-  color: #fff;
+nav,
+section,
+main,
+aside {
+  padding-top: 24px;
 }
 
 nav {
-  font-size: 20px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 32px;
-}
-
-/* Centering the header without the navigation */
-
-.header-container {
-  width: 1200px;
-  position: absolute;
-
-  /* In relation to PARENT size */
-
-  left: 50%;
-  top: 50%;
-
-  /* In relation to ELEMENT size */
-
-  transform: translate(-50%, -50%);
-}
-
-.header-container-inner {
-  width: 50%;
-}
-
-h1 {
-  font-size: 52px;
-  margin-bottom: 32px;
-  line-height: 1.05;
-}
-
-p {
-  font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 48px;
-}
-
-.btn:link,
-.btn:visited {
-  font-size: 20px;
-  font-weight: 600;
-  background-color: #e67e22;
+  background-color: #343a40;
   color: #fff;
-  text-decoration: none;
-  display: inline-block; /* to apply padding */
-  padding: 16px 32px;
-  border-radius: 9px;
+
+  grid-column: 1/2;
+  grid-row: 1/-1;
 }
 
-.btn:hover,
-.btn:active {
+menu {
+  background-color: #7048e8;
+
+  grid-column: 2/-1;
+  grid-row: 1/2;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 40px;
 }
 
-h2 {
-  font-size: 44px;
-  margin-bottom: 48px;
+button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #5f3dc4;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 8px 12px;
+}
+
+button:last-child {
+  background-color: #d6336c;
+  margin-left: auto; /* Moves last button to the right! */
 }
 
 section {
-  padding: 96px 0;
-  background-color: #f7f7f7;
+  background-color: #e9ecef;
+  padding: 40px;
+
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  overflow: scroll; /* Remember to set flex-shrink to ZERO! */
+  overflow-x: hidden; /* Hides the vertical scrollbar */
+}
+
+.email {
+  background-color: #adb5bd;
+  height: 96px;
+
+  /* To center the text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* To activate 'overflow: scroll' on container */
+  flex-shrink: 0;
+}
+
+aside {
+  background-color: #e9ecef;
+
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+
+main {
+  grid-column: 3/4;
+  grid-row: 2/3;
 }
