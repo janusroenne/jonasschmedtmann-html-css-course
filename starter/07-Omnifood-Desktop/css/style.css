@@ -1,6 +1,6 @@
-/**********************/
-/* HEADER             */
-/**********************/
+/**********/
+/* HEADER */
+/**********/
 
 .header {
   display: flex;
@@ -17,9 +17,9 @@
   height: 2rem;
 }
 
-/**********************/
-/* NAVIGATION         */
-/**********************/
+/**************/
+/* NAVIGATION */
+/**************/
 
 .main-nav-list {
   list-style: none;
@@ -58,9 +58,9 @@
   background-color: #cf711f;
 }
 
-/**********************/
-/* HERO SECTION       */
-/**********************/
+/****************/
+/* HERO SECTION */
+/****************/
 
 .section-hero {
   background-color: #fdf2e9;
@@ -120,9 +120,9 @@
   font-weight: 700;
 }
 
-/*****************************/
-/* FEATURED IN SECTION       */
-/*****************************/
+/***********************/
+/* FEATURED IN SECTION */
+/***********************/
 
 .section-featured {
   padding: 4.8rem 0 3.2rem 0;
@@ -149,9 +149,9 @@
   opacity: 50%;
 }
 
-/*****************************/
-/* HOW SECTION WORKS SECTION */
-/*****************************/
+/************************/
+/* HOW IT WORKS SECTION */
+/************************/
 
 .section-how {
   padding: 9.6rem 0;
@@ -229,10 +229,17 @@
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
   overflow: hidden; /* To prevent the image from overflowing the rounded cornors at the top */
+  transition: all 0.4s; /* The bigger the element, the longer it "can" be animated */
 }
 
 .meal-content {
   padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+/* Hover effect on entire meal box */
+.meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 
 .meal-tags {
@@ -293,4 +300,96 @@
 
 .meal-img {
   width: 100%;
+}
+
+.all-recipes {
+  font-size: 1.8rem;
+}
+
+.list {
+  /* height: 100%; */
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  /* justify-content: space-between; */
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+/************************/
+/* TESTIMONIALS SECTION */
+/************************/
+
+.section-testimonials {
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testimonials-container {
+  padding: 9.6rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+/*******************/
+/* GALLERY SECTION */
+/*******************/
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  /* Creates a zoom effect, since it no longer overflows */
+  overflow: hidden;
+}
+
+/* Images are inline elements, so they have a small white gap between them, we remore this gap be setting them to block level elements */
+.gallery-item img {
+  display: block;
+  width: 100%; /* Making images flexible to not fill the entire screen */
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
 }

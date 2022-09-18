@@ -31,6 +31,7 @@ Paragraph default: 1.6
 - Shades: #cf711f
 - Accents:
 - Greys
+#6f6f6f (Lightest grey allowed on #fdf2e9)
 #555
 #333
 
@@ -139,7 +140,7 @@ body {
   border-radius: 9px; /* Not in rem */
 
   /* Put transition on original "state" */
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .btn-full:link,
@@ -171,8 +172,33 @@ body {
 
 /* !important keyword for helper classes is good practice */
 
+.link:link,
+.link:visited {
+  display: inline-block; /* so we can use padding */
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor; /* currentColor = current color (ie. the text color) */
+  padding-bottom: 2px; /* Looks better than the underline from the default text-decoration */
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent; /* Removing the border completely will cause the webpage to "jump" by 1px */
+}
+
+/* HELPER/SETTINGS CLASSES */
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text{
+  text-align: center;
 }
 
 strong {
